@@ -8,7 +8,7 @@ count=1
 
 for (n in 12:50){
 
-URL=paste('http://m.weibo.cn/page/json?containerid=1005052355790234_-_WEIBO_SECOND_PROFILE_WEIBO&page=',n,sep='')
+URL=paste('http://m.weibo.cn/page/json?containerid=***********_-_WEIBO_SECOND_PROFILE_WEIBO&page=',n,sep='')
 
 WData=fromJSON(file = URL, method="C")
 
@@ -50,14 +50,14 @@ names(clean)='Weibo'
 
 clean[,1]=as.character(clean[,1])
 
-# subset¿ÕÖµ
+# subsetç©ºå€¼
 len.ind=nchar(clean[,1])
 clean=as.data.frame(clean)
 clean['ind']=len.ind
 clean.new=filter(clean,ind>1)
 clean.new=clean$V1
 
-#Í¨¹ıRwordseg·Ö´Ê 
+#é€šè¿‡Rwordsegåˆ†è¯ 
 rt=segmentCN(as.character(clean.new))
 
  
@@ -69,12 +69,12 @@ rt4$rt1=as.character(rt4$rt1)
 rt4$len=nchar(rt4$rt1)
 
 
-#Ö»±£Áô³¤¶È´óÓÚ2µÄ×Ö·û 
+#åªä¿ç•™é•¿åº¦å¤§äº2çš„å­—ç¬¦ 
 rt4=subset(rt4,len>1) 
 rt5=rt4[1:100,]
 rt5=rt5[-c(1,2,4,6),]
 rt5=rt5[-c(6,9),]
-# È¥³ıÈç¡®×ª·¢¡¯¡®Î¢²©¡¯µÈ´Ê»ã
+# å»é™¤å¦‚â€˜è½¬å‘â€™â€˜å¾®åšâ€™ç­‰è¯æ±‡
 
 rt5=rt5[1:50,]
 
