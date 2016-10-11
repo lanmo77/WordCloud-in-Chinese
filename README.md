@@ -5,6 +5,6 @@ This is an attempt to draw wordcloud in Chinese. The main aim for this is to cel
 
 <div style="text-align: center;" align = "center">
   <span class="slide" style="float:center;width: 80%;">
-  <IMG SRC="WordCloud-in-Chinese/Rplot.png" float = "center" ALT="image" width="600">
+  <IMG SRC="https://github.com/lanmo77/WordCloud-in-Chinese/blob/master/Rplot.png?raw=true" float = "center" ALT="image" width="600">
   </span>
 </div>
